@@ -17,7 +17,7 @@ function App() {
 function Nav() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-bg/80 backdrop-blur-xl border-b border-white/[0.06]">
-      <div className="max-w-5xl mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
+      <div className="max-w-[1100px] mx-auto px-6 lg:px-10 h-16 flex items-center justify-between">
         <a
           href="/"
           className="font-heading text-[1.15rem] italic font-normal tracking-[-0.02em]"
@@ -31,7 +31,7 @@ function Nav() {
         </a>
         <a
           href={APP_URL}
-          className="text-[13px] font-medium font-body tracking-wide rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/40 hover:text-white/60 px-5 py-2 backdrop-blur-sm transition-all duration-200"
+          className="text-[13px] font-medium font-body tracking-wide rounded-full border border-gold/30 text-gold/70 hover:bg-gold/10 hover:text-gold px-5 py-2 transition-all duration-200"
         >
           Start free trial
         </a>
@@ -43,8 +43,8 @@ function Nav() {
 /* ─── Hero ─── */
 function Hero() {
   return (
-    <section className="pt-36 pb-24 md:pt-48 md:pb-36 px-6 lg:px-10">
-      <div className="max-w-5xl mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
+    <section className="pt-40 pb-32 md:pt-52 md:pb-40 px-6 lg:px-10">
+      <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
         {/* Copy */}
         <div className="flex-1 text-center lg:text-left">
           <h1 className="font-heading font-normal tracking-tight leading-[1.08]" style={{ fontSize: 'clamp(2.5rem, 5vw, 3.8rem)' }}>
@@ -57,7 +57,7 @@ function Hero() {
           </p>
           <a
             href={APP_URL}
-            className="mt-9 inline-flex items-center gap-2 bg-gradient-to-br from-gold to-gold-bright text-[#1a1408] font-semibold text-[15px] tracking-wide px-8 py-3.5 rounded-[14px] hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(212,175,112,0.3),0_2px_8px_rgba(0,0,0,0.3)] active:translate-y-0 transition-all duration-200"
+            className="mt-9 inline-flex items-center gap-2 bg-gradient-to-br from-gold to-gold-bright text-[#1a1408] font-semibold text-[15px] tracking-wide px-8 py-3.5 rounded-[14px] border-0 outline-none hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(212,175,112,0.3),0_2px_8px_rgba(0,0,0,0.3)] active:translate-y-0 transition-all duration-200"
           >
             Start free trial — no credit card required
           </a>
@@ -192,7 +192,7 @@ function HowItWorks() {
 
   return (
     <section className="py-24 md:py-32 px-6 lg:px-10">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[1100px] mx-auto">
         <h2 className="font-heading text-[1.65rem] font-normal text-center tracking-tight mb-3">
           How it works
         </h2>
@@ -200,11 +200,11 @@ function HowItWorks() {
           Three steps. One minute. A presentation that looks like it cost thousands.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-4">
+        <div className="grid md:grid-cols-3 gap-5">
           {steps.map((step) => (
             <div
               key={step.num}
-              className="text-center rounded-[14px] border border-white/[0.08] bg-white/[0.04] hover:border-white/[0.15] hover:bg-white/[0.07] hover:-translate-y-px transition-all duration-250 py-8 px-6"
+              className="text-center rounded-[14px] border border-white/[0.08] bg-white/[0.04] hover:border-white/[0.15] hover:bg-white/[0.07] hover:-translate-y-px transition-all duration-250 py-8 px-6 min-h-[240px] flex flex-col items-center justify-start"
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gold/[0.08] text-gold mb-5">
                 {step.icon}
@@ -266,16 +266,16 @@ function Features() {
 
   return (
     <section className="py-24 md:py-32 px-6 lg:px-10">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[1100px] mx-auto">
         <h2 className="font-heading text-[1.65rem] font-normal text-center tracking-tight mb-16">
           Everything you need at your open home
         </h2>
 
-        <div className="grid sm:grid-cols-2 gap-3">
+        <div className="grid sm:grid-cols-2 gap-5">
           {features.map((f) => (
             <div
               key={f.title}
-              className="rounded-2xl bg-bg-card border border-white/[0.10] p-8 hover:border-gold/20 transition-all duration-200 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
+              className="rounded-2xl bg-bg-card border border-white/[0.10] p-7 md:p-8 hover:border-gold/20 transition-all duration-200 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
             >
               <div className="w-10 h-10 rounded-xl bg-gold/[0.08] flex items-center justify-center text-gold mb-5">
                 {f.icon}
@@ -294,7 +294,7 @@ function Features() {
 function Pricing() {
   return (
     <section className="py-24 md:py-32 px-6 lg:px-10">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-[1100px] mx-auto">
         <h2 className="font-heading text-[1.65rem] font-normal text-center tracking-tight mb-3">
           Simple pricing
         </h2>
@@ -302,7 +302,7 @@ function Pricing() {
           Start for free. Upgrade when you're ready.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-4 max-w-2xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-5 max-w-[680px] mx-auto">
           {/* Free tier */}
           <div className="rounded-2xl bg-bg-card border border-white/[0.10] p-8 flex flex-col shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             <h3 className="font-heading text-[1.1rem] font-normal mb-1">Free Trial</h3>
@@ -314,7 +314,7 @@ function Pricing() {
             </ul>
             <a
               href={APP_URL}
-              className="text-center text-[13px] font-medium font-body tracking-wide rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white/40 hover:text-white/60 px-6 py-2.5 backdrop-blur-sm transition-all duration-200"
+              className="text-center text-[13px] font-medium font-body tracking-wide rounded-[14px] border border-gold/30 text-gold/70 hover:bg-gold/10 hover:text-gold px-6 py-2.5 transition-all duration-200"
             >
               Start free trial
             </a>
@@ -322,8 +322,8 @@ function Pricing() {
 
           {/* Paid tier */}
           <div className="rounded-2xl bg-bg-card border border-gold/25 p-8 flex flex-col relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
-            <div className="absolute top-3 right-3">
-              <span className="text-[9px] uppercase tracking-[0.1em] font-medium text-gold/60 bg-gold/[0.08] border border-gold/15 px-2.5 py-1 rounded-full">
+            <div className="absolute top-4 right-4">
+              <span className="text-[9px] uppercase tracking-[0.1em] font-semibold text-[#1a1408] bg-gradient-to-br from-gold to-gold-bright px-3 py-1 rounded-full shadow-sm">
                 Popular
               </span>
             </div>
@@ -369,7 +369,7 @@ function PricingItem({ children }: { children: React.ReactNode }) {
 function Footer() {
   return (
     <footer className="py-10 px-6 lg:px-10 border-t border-white/[0.06]">
-      <div className="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+      <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
         <a
           href="/"
           className="font-heading italic text-[0.85rem] font-normal"
