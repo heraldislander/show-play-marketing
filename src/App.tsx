@@ -31,7 +31,7 @@ function Nav() {
         </a>
         <a
           href={APP_URL}
-          className="text-[13px] font-medium font-body tracking-wide rounded-full border border-gold/30 text-gold/70 hover:bg-gold/10 hover:text-gold px-5 py-2 transition-all duration-200"
+          className="text-[13px] font-semibold font-body tracking-wide rounded-full bg-gradient-to-br from-gold to-gold-bright text-[#1a1408] px-5 py-2 hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(212,175,112,0.3)] transition-all duration-200"
         >
           Start free trial
         </a>
@@ -43,7 +43,7 @@ function Nav() {
 /* ─── Hero ─── */
 function Hero() {
   return (
-    <section className="pt-40 pb-32 md:pt-52 md:pb-40 px-6 lg:px-10">
+    <section className="pt-48 pb-40 md:pt-56 md:pb-48 px-6 lg:px-10">
       <div className="max-w-[1100px] mx-auto flex flex-col lg:flex-row items-center gap-16 lg:gap-20">
         {/* Copy */}
         <div className="flex-1 text-center lg:text-left">
@@ -57,7 +57,7 @@ function Hero() {
           </p>
           <a
             href={APP_URL}
-            className="mt-9 inline-flex items-center gap-2 bg-gradient-to-br from-gold to-gold-bright text-[#1a1408] font-semibold text-[15px] tracking-wide px-8 py-3.5 rounded-[14px] border-0 outline-none hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(212,175,112,0.3),0_2px_8px_rgba(0,0,0,0.3)] active:translate-y-0 transition-all duration-200"
+            className="mt-9 inline-flex items-center gap-2 bg-gradient-to-br from-gold to-gold-bright text-[#1a1408] font-semibold text-[15px] tracking-wide px-8 py-[14px] rounded-[14px] border-0 outline-none shadow-[0_2px_12px_rgba(212,175,112,0.2)] hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(212,175,112,0.3),0_2px_8px_rgba(0,0,0,0.3)] active:translate-y-0 transition-all duration-200"
           >
             Start free trial — no credit card required
           </a>
@@ -191,20 +191,20 @@ function HowItWorks() {
   ]
 
   return (
-    <section className="py-24 md:py-32 px-6 lg:px-10">
+    <section className="py-24 md:py-32 px-6 lg:px-10 border-t border-white/[0.06]">
       <div className="max-w-[1100px] mx-auto">
-        <h2 className="font-heading text-[1.65rem] font-normal text-center tracking-tight mb-3">
+        <h2 className="font-heading text-[1.65rem] font-normal text-center tracking-tight mb-4">
           How it works
         </h2>
-        <p className="text-text-secondary text-center text-[1rem] font-light tracking-wide mb-16">
+        <p className="text-text-secondary text-center text-[1rem] font-light tracking-wide mb-12 md:mb-16">
           Three steps. One minute. A presentation that looks like it cost thousands.
         </p>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-3 gap-6">
           {steps.map((step) => (
             <div
               key={step.num}
-              className="text-center rounded-[14px] border border-white/[0.08] bg-white/[0.04] hover:border-white/[0.15] hover:bg-white/[0.07] hover:-translate-y-px transition-all duration-250 py-8 px-6 min-h-[240px] flex flex-col items-center justify-start"
+              className="text-center rounded-[14px] border border-white/[0.08] bg-white/[0.04] hover:border-white/[0.15] hover:bg-white/[0.07] hover:-translate-y-px transition-all duration-250 py-10 px-8"
             >
               <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-gold/[0.08] text-gold mb-5">
                 {step.icon}
@@ -265,9 +265,9 @@ function Features() {
   ]
 
   return (
-    <section className="py-24 md:py-32 px-6 lg:px-10">
+    <section className="py-24 md:py-32 px-6 lg:px-10 border-t border-white/[0.06]">
       <div className="max-w-[1100px] mx-auto">
-        <h2 className="font-heading text-[1.65rem] font-normal text-center tracking-tight mb-16">
+        <h2 className="font-heading text-[1.65rem] font-normal text-center tracking-tight mb-12 md:mb-16">
           Everything you need at your open home
         </h2>
 
@@ -277,11 +277,11 @@ function Features() {
               key={f.title}
               className="rounded-2xl bg-bg-card border border-white/[0.10] p-7 md:p-8 hover:border-gold/20 transition-all duration-200 shadow-[0_8px_32px_rgba(0,0,0,0.4)]"
             >
-              <div className="w-10 h-10 rounded-xl bg-gold/[0.08] flex items-center justify-center text-gold mb-5">
+              <div className="w-10 h-10 rounded-xl bg-gold/[0.08] flex items-center justify-center text-gold mb-4">
                 {f.icon}
               </div>
               <h3 className="font-heading text-[0.95rem] font-normal mb-2">{f.title}</h3>
-              <p className="text-text-muted text-[0.82rem] font-light leading-relaxed">{f.desc}</p>
+              <p className="text-text-muted text-[0.82rem] font-light leading-relaxed mt-2">{f.desc}</p>
             </div>
           ))}
         </div>
@@ -293,16 +293,16 @@ function Features() {
 /* ─── Pricing ─── */
 function Pricing() {
   return (
-    <section className="py-24 md:py-32 px-6 lg:px-10">
+    <section className="py-24 md:py-32 px-6 lg:px-10 border-t border-white/[0.06]">
       <div className="max-w-[1100px] mx-auto">
-        <h2 className="font-heading text-[1.65rem] font-normal text-center tracking-tight mb-3">
+        <h2 className="font-heading text-[1.65rem] font-normal text-center tracking-tight mb-4">
           Simple pricing
         </h2>
-        <p className="text-text-secondary text-center text-[1rem] font-light tracking-wide mb-16">
+        <p className="text-text-secondary text-center text-[1rem] font-light tracking-wide mb-12 md:mb-16">
           Start for free. Upgrade when you're ready.
         </p>
 
-        <div className="grid md:grid-cols-2 gap-5 max-w-[680px] mx-auto">
+        <div className="grid md:grid-cols-2 gap-5 max-w-[760px] mx-auto">
           {/* Free tier */}
           <div className="rounded-2xl bg-bg-card border border-white/[0.10] p-8 flex flex-col shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             <h3 className="font-heading text-[1.1rem] font-normal mb-1">Free Trial</h3>
@@ -314,7 +314,7 @@ function Pricing() {
             </ul>
             <a
               href={APP_URL}
-              className="text-center text-[13px] font-medium font-body tracking-wide rounded-[14px] border border-gold/30 text-gold/70 hover:bg-gold/10 hover:text-gold px-6 py-2.5 transition-all duration-200"
+              className="block text-center text-[13px] font-semibold font-body tracking-wide rounded-[14px] border border-gold/30 text-gold py-3 hover:bg-gold/10 transition-all duration-200"
             >
               Start free trial
             </a>
@@ -323,7 +323,7 @@ function Pricing() {
           {/* Paid tier */}
           <div className="rounded-2xl bg-bg-card border border-gold/25 p-8 flex flex-col relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.4)]">
             <div className="absolute top-4 right-4">
-              <span className="text-[9px] uppercase tracking-[0.1em] font-semibold text-[#1a1408] bg-gradient-to-br from-gold to-gold-bright px-3 py-1 rounded-full shadow-sm">
+              <span className="text-[11px] uppercase tracking-[0.05em] font-semibold text-gold bg-gold/[0.15] px-2.5 py-1 rounded-full">
                 Popular
               </span>
             </div>
@@ -339,7 +339,7 @@ function Pricing() {
             </ul>
             <a
               href={APP_URL}
-              className="text-center text-[15px] font-semibold font-body tracking-wide bg-gradient-to-br from-gold to-gold-bright text-[#1a1408] px-6 py-3 rounded-[14px] hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(212,175,112,0.3),0_2px_8px_rgba(0,0,0,0.3)] active:translate-y-0 transition-all duration-200"
+              className="block text-center text-[15px] font-semibold font-body tracking-wide bg-gradient-to-br from-gold to-gold-bright text-[#1a1408] py-3.5 rounded-[14px] border-0 outline-none shadow-[0_2px_12px_rgba(212,175,112,0.2)] hover:-translate-y-px hover:shadow-[0_4px_20px_rgba(212,175,112,0.3),0_2px_8px_rgba(0,0,0,0.3)] active:translate-y-0 transition-all duration-200"
             >
               Start free trial
             </a>
